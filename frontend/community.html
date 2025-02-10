@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion Forum - ZeroWaste Platform</title>
+    <link rel="shortcut icon" href="/frontend/logo.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="flex items-center justify-between px-4 py-2 bg-white border-b">
+        <div class="flex items-center gap-2">
+            <img src="/frontend/logo.png" alt="ZeroWaste Logo" class="w-8 h-8">
+            <h1 class="text-xl font-semibold">ZeroWaste</h1>
+        </div>
+        <div class="flex items-center gap-4">
+            <span>Hi, NAIMUR!</span>
+        </div>
+    </header>
+
+    <div class="flex">
+        <!-- Sidebar -->
+        <aside class="w-64 min-h-screen bg-white border-r">
+            <nav class="p-4">
+                <div class="mb-8">
+                    <h2 class="text-sm font-semibold text-gray-500 mb-2">ACCOUNT</h2>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-3 px-3 py-2 hover:bg-gray-100 rounded-lg">
+                            <i class="fas fa-home"></i>
+                            <a href="/frontend/dashboard.html">Home</a>
+                        </li>
+                        <li class="flex items-center gap-3 px-3 py-2 hover:bg-gray-100 rounded-lg">
+                            <i class="fas fa-user"></i>
+                            <a href="/frontend/profile.html">Profile</a>
+                        </li>
+                        <li class="flex items-center gap-3 px-3 py-2 hover:bg-gray-100 rounded-lg">
+                            <i class="fas fa-heart"></i>
+                            <a href="/frontend/volunteer.html">Volunteer</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mb-8">
+                    <h2 class="text-sm font-semibold text-gray-500 mb-2">MAIN</h2>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-3 px-3 py-2 hover:bg-gray-100 rounded-lg">
+                            <i class="fas fa-users"></i>
+                            <a href="/frontend/leaderboard.html">Leaderboard</a>
+                        </li>
+                        <li class="flex items-center gap-3 px-3 py-2 hover:bg-gray-100 rounded-lg">
+                            <i class="fas fa-users"></i>
+                            <a href="/frontend/report_waste.html">Waste Report</a>
+                        </li>
+                        <li class="flex items-center gap-3 px-3 py-2 hover:bg-gray-100 rounded-lg">
+                            <i class="fas fa-users"></i>
+                            <a href="/frontend/reward_system.html">Reward</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-sm font-semibold text-gray-500 mb-2">SUPPORT</h2>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-3 px-3 py-2 hover:bg-gray-100 rounded-lg">
+                            <i class="fas fa-flag"></i>
+                            <span>Report</span>
+                        </li>
+                        <li class="flex items-center gap-3 px-3 py-2 hover:bg-gray-100 rounded-lg">
+                            <i class="fas fa-circle-question"></i>
+                            <span>Help</span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6">
+            <h2 class="text-2xl font-semibold mb-6">Discussion Forum</h2>
+            
+            <!-- Create New Topic -->
+            <section class="mb-8 bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-semibold mb-4">Start a New Discussion</h3>
+                <form class="space-y-4">
+                    <div>
+                        <label for="topic-title"   class="block mb-1 font-medium">Topic Title</label>
+                        <input type="text" id="topic-title" class="w-full px-3 py-2 border rounded-md" placeholder="Enter your topic title">
+                    </div>
+                    <div>
+                        <label for="topic-category" class="block mb-1 font-medium">Category</label>
+                        <select id="topic-category" class="w-full px-3 py-2 border rounded-md">
+                            <option>Waste Management</option>
+                            <option>Sustainable Living</option>
+                            <option>Clean-up Events</option>
+                            <option>Eco-friendly Products</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="topic-content" class="block mb-1 font-medium">Content</label>
+                        <textarea id="topic-content" rows="4" class="w-full px-3 py-2 border rounded-md" placeholder="Write your discussion topic here..."></textarea>
+                    </div>
+                    <button type="submit" class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600">Post Topic</button>
+                </form>
+            </section>
+
+            <!-- Recent Discussions -->
+            <section class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-semibold mb-4">Recent Discussions</h3>
+                <div class="space-y-4">
+                    <div class="border-b pb-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-semibold text-lg">Tips for reducing plastic waste at home</h4>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Sustainable Living</span>
+                        </div>
+                        <p class="text-gray-600 mb-2">I've been trying to reduce my plastic waste at home. Here are some tips that worked for me...</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <img src="/frontend/lm1.jpg" alt="User Avatar" class="w-6 h-6 rounded-full mr-2">
+                            <span>Posted by EcoWarrior123</span>
+                            <span class="mx-2">•</span>
+                            <span>2 hours ago</span>
+                            <span class="mx-2">•</span>
+                            <span>15 comments</span>
+                        </div>
+                    </div>
+                    <div class="border-b pb-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-semibold text-lg">Organizing a beach clean-up event</h4>
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Clean-up Events</span>
+                        </div>
+                        <p class="text-gray-600 mb-2">I'm planning to organize a beach clean-up event next month. Any advice on how to get started?</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <img src="/frontend/communities2.jpg" alt="User Avatar" class="w-6 h-6 rounded-full mr-2">
+                            <span>Posted by BeachLover</span>
+                            <span class="mx-2">•</span>
+                            <span>1 day ago</span>
+                            <span class="mx-2">•</span>
+                            <span>32 comments</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-semibold text-lg">Review: Eco-friendly water bottle</h4>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded">Eco-friendly Products</span>
+                        </div>
+                        <p class="text-gray-600 mb-2">I recently purchased a new eco-friendly water bottle. Here's my honest review after using it for a month...</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <img src="/frontend/bottle.jpg" alt="User Avatar" class="w-6 h-6 rounded-full mr-2">
+                            <span>Posted by GreenGadgetGuru</span>
+                            <span class="mx-2">•</span>
+                            <span>3 days ago</span>
+                            <span class="mx-2">•</span>
+                            <span>8 comments</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="mt-6 text-green-600 hover:underline">View All Discussions</button>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

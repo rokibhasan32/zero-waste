@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Reporting - ZeroWaste Platform</title>
+    <link rel="shortcut icon" href="/frontend/logo.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Header (same as main page) -->
+    <header class="flex items-center justify-between px-4 py-2 bg-white border-b">
+        <div class="flex items-center gap-2">
+            <img src="/frontend/logo.png" alt="ZeroWaste Logo" class="w-8 h-8">
+            <h1 class="text-xl font-semibold">ZeroWaste</h1>
+        </div>
+        <div class="flex items-center gap-4">
+            <span>Hi, User!</span>
+        </div>
+    </header>
+
+    <div class="flex">
+        <!-- Sidebar (same as main page) -->
+        <aside class="w-64 min-h-screen bg-white border-r">
+            <!-- Sidebar content (same as main page) -->
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6">
+            <h2 class="text-2xl font-semibold mb-6">Waste Reporting System</h2>
+            
+            <!-- Photo Upload Section -->
+            <section class="mb-8 bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-semibold mb-4">Upload Waste Photo</h3>
+                <div class="flex items-center justify-center w-full">
+                    <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
+                        <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                            <i class="fas fa-cloud-upload-alt text-4xl text-gray-500 mb-3"></i>
+                            <p class="mb-2 text-sm text-gray-500"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                            <p class="text-xs text-gray-500">PNG, JPG or GIF (MAX. 800x400px)</p>
+                        </div>
+                        <input id="dropzone-file" type="file" class="hidden" />
+                    </label>
+                </div>
+            </section>
+
+            <!-- AI Analysis Section -->
+            <section class="mb-8 bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-semibold mb-4">AI Analysis Results</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <h4 class="font-semibold mb-2">Waste Type:</h4>
+                        <p>Plastic (80% confidence)</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-2">Estimated Amount:</h4>
+                        <p>5-10 kg</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-2">Location:</h4>
+                        <p>Latitude: 23.8103° N, Longitude: 90.4125° E</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-2">Timestamp:</h4>
+                        <p>2023-06-15 14:30:00 UTC</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Real-time Notifications -->
+            <section class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-semibold mb-4">Notification Status</h3>
+                <div class="flex items-center gap-4 text-green-600">
+                    <i class="fas fa-check-circle text-2xl"></i>
+                    <p>Alerts sent to local volunteers and authorities</p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

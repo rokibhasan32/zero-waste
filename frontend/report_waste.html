@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Waste - Report Waste</title>
+    <link rel="shortcut icon" href="/frontend/logo.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="flex items-center justify-between px-4 py-2 bg-white border-b">
+        <div class="flex items-center gap-2">
+            <img src="/frontend/logo.png" alt="ZeroWaste Logo" class="w-8 h-8">
+            <h1 class="text-xl font-semibold">ZeroWaste</h1>
+        </div>
+        <div class="flex items-center gap-4">
+            <span>Hi, User!</span>
+        </div>
+    </header>
+
+    <div class="flex">
+        <!-- Sidebar -->
+        <aside class="w-64 min-h-screen bg-white border-r">
+            <nav class="p-4">
+                <div class="mb-8">
+                    <h2 class="text-sm font-semibold text-gray-500 mb-2">ACCOUNT</h2>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-3 px-3 py-2 hover:bg-gray-100 rounded-lg">
+                            <i class="fas fa-home"></i>
+                            <a href="/frontend/dashboard.html">Home</a>
+                        </li>
+                        <li class="flex items-center gap-3 px-3 py-2 hover:bg-gray-100 rounded-lg">
+                            <i class="fas fa-user"></i>
+                            <a href="/frontend/profile.html">Profile</a>
+                        </li>
+                        <li class="flex items-center gap-3 px-3 py-2 hover:bg-gray-100 rounded-lg">
+                            <i class="fas fa-heart"></i>
+                            <a href="/frontend/volunteer.html">Volunteer</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mb-8">
+                    <h2 class="text-sm font-semibold text-gray-500 mb-2">MAIN</h2>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-3 px-3 py-2 hover:bg-gray-100 rounded-lg">
+                            <i class="fas fa-users"></i>
+                            <a href="/frontend/community.html">Community</a>
+                        </li>
+                        <li class="flex items-center gap-3 px-3 py-2 hover:bg-gray-100 rounded-lg">
+                            <i class="fas fa-users"></i>
+                            <a href="/frontend/leaderboard.html">Leaderboard</a>
+                        </li>
+                        <li class="flex items-center gap-3 px-3 py-2 hover:bg-gray-100 rounded-lg">
+                            <i class="fas fa-users"></i>
+                            <a href="/frontend/reward_system.html">Reward</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-sm font-semibold text-gray-500 mb-2">SUPPORT</h2>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-3 px-3 py-2 hover:bg-gray-100 rounded-lg">
+                            <i class="fas fa-flag"></i>
+                            <span>Report</span>
+                        </li>
+                        <li class="flex items-center gap-3 px-3 py-2 hover:bg-gray-100 rounded-lg">
+                            <i class="fas fa-circle-question"></i>
+                            <span>Help</span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6">
+            <h2 class="text-2xl font-semibold mb-6">Report Waste</h2>
+            
+            <!-- Waste Reporting Form -->
+            <section class="mb-8 bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-semibold mb-4">Submit a Waste Report</h3>
+                <form class="space-y-4">
+                    <div>
+                        <label for="waste-type" class="block mb-1 font-medium">Waste Type</label>
+                        <select id="waste-type" class="w-full px-3 py-2 border rounded-md">
+                            <option>Plastic</option>
+                            <option>Paper</option>
+                            <option>Glass</option>
+                            <option>Metal</option>
+                            <option>Organic</option>
+                            <option>Electronic</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="waste-amount" class="block mb-1 font-medium">Estimated Amount</label>
+                        <div class="flex items-center">
+                            <input type="number" id="waste-amount" class="w-full px-3 py-2 border rounded-l-md" placeholder="Enter amount">
+                            <select class="border border-l-0 rounded-r-md px-3 py-2">
+                                <option>kg</option>
+                                <option>lbs</option>
+                                <option>bags</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="waste-location" class="block mb-1 font-medium">Location</label>
+                        <input type="text" id="waste-location" class="w-full px-3 py-2 border rounded-md" placeholder="Enter location or use current location">
+                    </div>
+                    <div>
+                        <label for="waste-description" class="block mb-1 font-medium">Description</label>
+                        <textarea id="waste-description" rows="3" class="w-full px-3 py-2 border rounded-md" placeholder="Provide additional details about the waste..."></textarea>
+                    </div>
+                    <div>
+                        <label class="block mb-1 font-medium">Upload Photos</label>
+                        <div class="flex items-center justify-center w-full">
+                            <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
+                                <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                    <i class="fas fa-cloud-upload-alt text-4xl text-gray-500 mb-3"></i>
+                                    <p class="mb-2 text-sm text-gray-500"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                                    <p class="text-xs text-gray-500">PNG, JPG or GIF (MAX. 800x400px)</p>
+                                </div>
+                                <input id="dropzone-file" type="file" class="hidden" multiple />
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600">Submit Report</button>
+                </form>
+            </section>
+
+            <!-- Recent Reports -->
+            <section class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-semibold mb-4">Recent Waste Reports</h3>
+                <div class="space-y-4">
+                    <div class="border-b pb-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-semibold text-lg">Plastic Waste at Dhanmondi Lake</h4>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded">Pending</span>
+                        </div>
+                        <p class="text-gray-600 mb-2">Large amount of plastic bottles and bags found near the lake shore.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <img src="/frontend/dm2.jpg" alt="User Avatar" class="w-6 h-6 rounded-full mr-2">
+                            <span>Reported by EcoWarrior123</span>
+                            <span class="mx-2">•</span>
+                            <span>2 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="border-b pb-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-semibold text-lg">Electronic Waste Dump</h4>
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">In Progress</span>
+                        </div>
+                        <p class="text-gray-600 mb-2">Old computers and electronics dumped behind the local market.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <img src="dm3.jpg" alt="User Avatar" class="w-6 h-6 rounded-full mr-2">
+                            <span>Reported by TechRecycler</span>
+                            <span class="mx-2">•</span>
+                            <span>1 day ago</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-semibold text-lg">Construction Debris on Sidewalk</h4>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Resolved</span>
+                        </div>
+                        <p class="text-gray-600 mb-2">Construction waste blocking pedestrian access on Main Street.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <img src="/frontend/dmL.jpg" alt="User Avatar" class="w-6 h-6 rounded-full mr-2">
+                            <span>Reported by CityObserver</span>
+                            <span class="mx-2">•</span>
+                            <span>3 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="mt-6 text-green-600 hover:underline">View All Reports</button>
+            </section>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="w-80 p-6 border-l">
+            <h2 class="text-2xl font-semibold mb-6">Waste Statistics</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h3 class="font-semibold mb-2">Total Waste Reported</h3>
+                    <p class="text-3xl font-bold text-green-600">1,250 kg</p>
+                    <p class="text-sm text-gray-500">Last 30 days</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h3 class="font-semibold mb-2">Most Reported Waste Type</h3>
+                    <p class="text-xl font-bold">Plastic</p>
+                    <p class="text-sm text-gray-500">45% of all reports</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h3 class="font-semibold mb-2">Top Reporting Areas</h3>
+                    <ol class="list-decimal list-inside">
+                        <li>Dhanmondi</li>
+                        <li>Gulshan</li>
+                        <li>Mirpur</li>
+                    </ol>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h3 class="font-semibold mb-2">Cleanup Progress</h3>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                        <div class="bg-green-600 h-2.5 rounded-full" style="width: 70%"></div>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-2">70% of reported waste cleaned</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>
